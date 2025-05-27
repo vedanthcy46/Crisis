@@ -120,12 +120,10 @@ python-engineio==4.12.1
 python-json-logger==3.3.0
 python-socketio==5.13.0
 pytz==2025.1
-pywin32==310
-pywinpty==2.0.15
 PyYAML==6.0.2
 pyzmq==26.4.0
 referencing==0.36.2
-requests==2.26.0
+requests>=2.31
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rpds-py==0.24.0
