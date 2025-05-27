@@ -54,8 +54,11 @@ class IncidentForm(FlaskForm):
     address = TextAreaField('Address/Location', validators=[DataRequired(), Length(min=5, max=500)])
     latitude = HiddenField('Latitude')
     longitude = HiddenField('Longitude')
-    image = FileField('Upload Image (Optional)', 
-                     validators=[FileAllowed(['jpg', 'jpeg', 'png', 'gif'], 'Images only!')])
+    image = FileField('Upload Image',
+    validators=[
+        FileRequired(message='Please upload an image.'),
+        FileAllowed(['jpg', 'jpeg', 'png', 'gif'], 'Only image files are allowed!')
+    ])
 
 class StatusUpdateForm(FlaskForm):
     status = SelectField('Status',
